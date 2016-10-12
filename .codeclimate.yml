@@ -4,8 +4,8 @@ engines:
   shellcheck:
     enabled: true
     exclude_fingerprints:
-      #- 645f2632ba377382583fe36adc9fb965
-      #- 26323397fb494c35fd50ae8c864664b9
+      - 6cfc3ceba4a3fdaf7765a096a0a6693c
+      - 44f483960809cfdf739f7a0093ebdc38
 
 ratings:
   paths:
