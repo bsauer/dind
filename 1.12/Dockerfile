@@ -5,7 +5,9 @@ LABEL org.label-schema.vcs-url="https://github.com/bsauer/dind" \
       org.label-schema.name=dind \
       com.bsauer.license=MIT
 
-RUN apk update && apk upgrade && apk add py-pip && \
+RUN apk --no-cache update && apk --no-cache upgrade && \
+    apk --no-cache add py-pip && \
+    rm -rf /var/cache/apk/* && \
     pip install docker-compose && \
     docker-compose --version
 
