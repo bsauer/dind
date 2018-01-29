@@ -1,4 +1,4 @@
-FROM docker:1.12-dind
+FROM docker:dind
 
 LABEL org.label-schema.vcs-url="https://github.com/bsauer/dind" \
       org.label-schema.vendor=berniesauer.com \
