@@ -9,7 +9,7 @@ RUN apk --no-cache update \
     && apk --no-cache upgrade \
     && apk --no-cache add py-pip \
     && rm -rf /var/cache/apk/* \
-    && pip install docker-compose \
+    && pip install -U docker-compose \
     && docker-compose --version
 
 COPY entrypoint.sh /usr/local/bin/
