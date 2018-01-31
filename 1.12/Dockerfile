@@ -8,8 +8,10 @@ LABEL org.label-schema.vcs-url="https://github.com/bsauer/dind" \
 RUN apk --no-cache update \
     && apk --no-cache upgrade \
     && apk --no-cache add py-pip \
+    && apk --no-cache add curl \
     && rm -rf /var/cache/apk/* \
     && pip install -U docker-compose \
+    && docker info \
     && docker-compose --version
 
 COPY entrypoint.sh /usr/local/bin/
